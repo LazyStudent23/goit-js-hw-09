@@ -25,3 +25,4 @@ buttonStop.addEventListener('click', element => {
 
   clearInterval(intervalId);
 });
+// console.log()
