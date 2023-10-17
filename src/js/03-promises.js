@@ -34,7 +34,7 @@ function onPromiseCreate(e) {
   if (step < 0 || amount <= 0) {
     Notify.failure(`❌ Enter the value > 0`, { timeout: 3000 });
   } else {
-    for (let i = 1; i < amount; i += 1) {
+    for (let i = 1; i <= amount; i += 1) {
       let promiseDelay = firstDelay + step * i;
       createPromise(i, promiseDelay)
         .then(({ position, delay }) => {
@@ -47,7 +47,7 @@ function onPromiseCreate(e) {
           );
         })
         .catch(({ position, delay }) => {
-          Notiflix.Notify.failure(
+          Notify.failure(
             `❌ Rejected promise ${position} in ${delay}ms`
           );
         });
