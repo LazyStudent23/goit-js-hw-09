@@ -11,7 +11,7 @@ const options = {
   cssAnimationStyle: 'from-right',
 };
 
-form.addEventListener('click', onPromiseCreate);
+form.addEventListener('submit', onPromiseCreate);
 
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
@@ -34,7 +34,7 @@ function onPromiseCreate(e) {
   if (step < 0 || amount <= 0) {
     Notify.failure(`❌ Enter the value > 0`, { timeout: 3000 });
   } else {
-    for (let i = 0; i < amount; i += 1) {
+    for (let i = 1; i < amount; i += 1) {
       let promiseDelay = firstDelay + step * i;
       createPromise(i, promiseDelay)
         .then(({ position, delay }) => {
