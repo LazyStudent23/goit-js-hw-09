@@ -58,7 +58,7 @@ button[type='submit'] {
 }
 
 button[disabled] {
-  color: #ab803c;
+  color: #fa5f22;
   animation: none;
 }
 
